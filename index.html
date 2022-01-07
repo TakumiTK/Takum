@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>期末報告</title>
+    <style>
+
+     .container {
+  /* flexboxでcontainerの中身をど真ん中に設置 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  
+
+ 
+}
+/* 額縁外側 */
+.around-slider {
+  width: 70em;
+  height: 40em;
+  display: block;
+  top: 10%;
+  position: absolute;
+
+}
+.slider {
+  display: block;
+  /* スライダーの額縁内の位置指定 */
+  top: 10%;
+  margin-left: 4%;
+  margin-right: 4%;
+  background-color: #fff;
+  height:40em;
+  width: 70em;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  /* .sliderに収まらない要素を隠すように指定 */
+  overflow: hidden;
+ 
+}
+/* スライダー*/
+.slider li {
+  list-style:none;
+  position: absolute;
+}
+.slider input {
+  display: none;
+}
+/* スライダーナビゲーションボタン */
+.slider label {
+  background-color: #2c2b2b;
+  border-radius: 100%;
+  cursor: pointer;
+  display: block;
+  height: 1.5em;
+  width: 1.5em;
+  /* ボタンの位置を指定 */
+  left: 34em;
+  bottom: .5em;
+  position: absolute;
+  /* hover後にボタンが現れる速度を調整 */
+  transition: .25s;
+z-index: 1;
+  box-shadow: 0px 1px 5px 1px #fff;
+}
+.slider input:checked + label {
+  /* クリックしたときのボタンの色を指定 */
+  background-color: rgb(131, 126, 126);
+}
+.slider:hover li:nth-child(1) label {
+  /* １つ目のボタンの位置を指定 */
+  left: 28em;
+}
+.slider:hover li:nth-child(2) label {
+  /* ２つ目のボタンの位置を指定 */
+  left: 32em;
+}
+.slider:hover li:nth-child(3) label {
+  /* ３つ目のボタンの位置を指定 */
+  left: 36em;
+}
+.slider:hover li:nth-child(4) label {
+  /* ４つ目のボタンの位置を指定 */
+  left: 40em;
+}
+/* 額内の写真 */
+.slider img {
+  opacity: 0;
+  /* アニメーションの速度調整 */
+  transition: 1.5s;
+ 
+  /* 変化前の明るさ・彩度・コントラストの指定 */
+
+}
+.slider li input:checked ~ img {
+  /* ボタンで選択後のスタイル指定 */
+  opacity: 1;
+  z-index: 10;
+ 
+  /* 変化後の明るさ・彩度・コントラストの指定 */
+
+}#page_top{/*top page*/
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  opacity: 0.6;
+  
+}
+#page_top a{
+  width: 60px;
+  height: 60px;
+  text-decoration: none;
+
+}
+#page_top a::before{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f0aa';
+  font-size: 60px;
+  color: #fff;
+
+}
+* {padding:0;
+margin:0;
+   box-sizing: border-box;
+}
+body {
+   margin: 0;
+   padding: 0;
+   background-color: #fff;
+}
+header {
+   padding: 30px 4% 10px;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   background-color: #fff;
+   display: flex;
+   align-items: center;
+   z-index: 1000;
+}
+h1 {
+   margin: 0; padding: 0;
+   font-size: 30px;
+   color: #333232;
+}
+a {	
+   text-decoration: none;
+   color: #615e5e;
+
+}
+ul {
+   list-style: none;
+   margin: 0;
+   display: flex;
+}
+li {
+   margin: 0 0 0 15px;
+   font-size: 14px;
+}
+small{
+  background:rgb(68, 67, 67);
+  color: rgb(248, 241, 241);;
+  display: block;
+  text-align: center;
+  padding:20px;
+}
+#page_top{/*top page*/
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  opacity: 0.6;
+}
+#page_top a{
+  width: 60px;
+  height: 60px;
+  text-decoration: none;
+}
+#page_top a::before{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f0aa';
+  font-size: 60px;
+  color: #3d3838;
+}
+
+#form2{/*サーチ*/
+position:relative;
+max-width:300px;	
+margin-bottom:auto;
+margin-left: 10%;
+margin-top: 2%
+
+
+}
+#sbox2{
+height:30px;
+padding:0 10px; 
+position:absolute; 
+left:0;
+top:0; 
+border-radius:2px;
+outline:0;
+background:#eee;	
+}
+#sbtn2{
+height:35px;
+position:absolute; 
+left:190px;/*アイコン左右の位置調整*/
+top:0;
+background:none;
+color:rgb(131, 127, 127);
+border:none;
+font-size:20px;/*アイコンサイズ*/
+}
+
+.c img{
+    width:90%;
+    height:90%;
+    margin-top: 10%;
+  }
+  .z img{
+    width:90%;
+    height:90%;
+    margin-top: 10%;
+  
+  } .x img{
+    width:90%;
+    height:90%;
+    margin-top: 10%;
+  } .v img{
+    width:90%;
+    height:90%;
+    margin-top: 10%;
+  } 
+      
+ 
+.over img:hover{
+    opacity: 0.5;
+}
+  ul.over{
+    list-style: none;   
+    display: flex;
+    justify-content:space-around;
+    margin: 0;
+    padding: 0;
+}
+
+.over img{
+    
+    height: auto;
+    display: block;
+    opacity: 1;
+    transition: .3s;
+}
+
+
+.kakomiaka {
+ position: relative;
+ margin: 2em auto;
+ padding: 5.2em;
+
+ width:70%;
+ border: 2px solid #7e7b7b; /* 枠線の太さ・色 */
+ box-shadow: 2px 2px 1px #ccc;/* 影の色 */
+  text-align: center;
+  display: flex;
+}
+.titleaka {
+ position: absolute;
+ padding: 0 .5em;
+ left: 20px;
+ top: -15px;
+ font-weight: bold;
+ background-color: #fff; /* タイトル背景色 */
+ color: #7e7b7b; /* タイトル文字色 */
+
+}
+</style>
+    <body>
+   
+      <header>
+        <h1>
+          <a href="index.html"><font size="7" face="serif">服利社</a></font>
+        </h1>
+        <nav class="pc-nav">
+            <ul>
+                  <li><a href="index.html">首頁</a></li>
+                  <li><a href="商品.html">商品</a></li>
+                  <li><a href="Q&A.html">Q&A</a></li>
+                  <li><a href="關於我們.html">關於我們</a></li>
+                  <li><a href="注冊.html">加入會員</a></li>
+                  <li><a href="登入.html">登入</a></li>
+                  <li><a href="index.html">登出</a></li>
+                 
+                </ul>
+                
+              </nav>
+              <form id="form2">
+                <input id="sbox2"  id="s" name="s" type="text" placeholder="Search"/>
+                <button type="submit" id="sbtn2"><i class="fas fa-search"></i></button>
+                </form>
+              
+          </header>
+          <main>
+            
+            <div class="container">
+                <div class="around-slider">
+                 
+                <ul class="slider">
+                    <li>
+                        <input type="radio" id="image1" name="image" checked>
+                        <label for="image1"></label>
+                        <img src="w.jpg" alt="image 1" style="width:70em;height:40em">
+                    </li>
+                    <li>
+                        <input type="radio" id="image2" name="image">
+                        <label for="image2"></label>
+                        <img src="b.jpg" alt="image 2"  style="width:70em;height:40em">
+                    </li>
+                    <li>
+                        <input type="radio" id="image3" name="image">
+                        <label for="image3"></label>
+                        <img src="ｄ.jpg" alt="image 3"  style="width:70em;height: 40em">
+                    </li>
+                    <li>
+                        <input type="radio" id="image4" name="image">
+                        <label for="image4"></label>
+                        <img src="lb.jpg" alt="image 4"  style="width:70em;height:40em">
+                    </li>
+                </ul>
+           </div>
+           <p style ="padding-top: 2100px;"></p>
+       <div class="kakomiaka"><font size="10"><span class="titleaka">熱門商品</span>
+       </font>
+       <ul class="over">
+       <a href="商品2.html"class="c" >
+        <img src="w.jpg">  <p>NT$240</p>
+        </a>&emsp;&emsp;&emsp;
+      <a href="商品1.html" class="z" >
+        <img src="b.jpg">  <p>NT$220</p>
+      </a>&emsp;&emsp;&emsp;
+      <a href="商品3.html" class="x" >
+        <img src="child.jpg">  <p>NT$190</p>
+      </a>&emsp;&emsp;&emsp;
+      <a href="商品4.html" class="v">
+        <img src="lb.jpg"  > <p>NT$200</p>
+      </a></ul>
+      </div>
+</main>
+
+          </p>
+     
+        
+          <footer id="footer">
+        <small>桃園市中壢區中北路200號<br>Tel：+886-3-265-9999<br>Fax：+886-3-265-8888</small>
+    </footer>
+    </p>
+  </div>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+
+  <div id="page_top"><a href="index.html"></a></div>
+  </body>
+  
+ 
+</html>

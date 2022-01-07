@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>購物車</title>
+    <style>
+ * {
+   box-sizing: border-box;
+}
+body {
+   margin: 0;
+   padding: 0;
+   background-color: #fff;
+}
+header {
+   padding: 30px 4% 10px;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   background-color: #fff;
+   display: flex;
+   z-index: 1000;
+   align-items: center;
+}
+h1 {
+   margin: 0; padding: 0;
+   font-size: 30px;
+}
+a {	
+   text-decoration: none;
+   color: #615e5e;
+
+}
+ul {
+   list-style: none;
+   margin: 0;
+   display: flex;
+}
+li {
+   margin: 0 0 0 15px;
+   font-size: 14px;
+}
+small{
+  background:rgb(68, 67, 67);
+  color: rgb(248, 241, 241);;
+  display: block;
+  text-align: center;
+  padding:20px;
+}
+#page_top{/*top page*/
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  opacity: 0.6;
+}
+#page_top a{
+  width: 60px;
+  height: 60px;
+  text-decoration: none;
+}
+#page_top a::before{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f0aa';
+  font-size: 60px;
+  color: #afadad;
+}
+
+
+
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+
+}
+
+
+
+.shopper {
+  text-transform: lowercase;
+  font: 2em 'Shopper', sans-serif;
+  line-height: 0.5em;
+  display: inline-block;
+}
+
+
+
+h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2.5em;
+}
+
+p {
+  font-size: 1.5em;
+  color: #8a8a8a;
+}
+
+input {
+  border: 0.3em solid #bbc3c6;
+  padding: 0.5em 0.3em; 
+  font-size: 1.4em;
+  color: #8a8a8a;
+  text-align: center;
+}
+
+img {
+  max-width: 9em;
+  width: 100%;
+  overflow: hidden; 
+  margin-right: 1em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  font: 62.5%/1.5em "Trebuchet Ms", helvetica;
+  max-width: 75em;
+  width: 95%;
+  margin: 40px auto;  
+  overflow: hidden;
+  position: relative;
+  
+  border-radius: 0.6em;
+  background: #ecf0f1;
+  box-shadow: 0 0.5em 0 rgba(138, 148, 152, 0.2);
+}
+
+.heading {
+  padding: 1em;
+  position: relative;
+  z-index: 1;
+  color: #f7f7f7;
+  background: #9bc79d;
+}
+
+.cart {
+  margin: 2.5em;
+  overflow: hidden;
+}
+
+
+.layout-inline > * {
+  display: inline-block;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.th {
+  background: #9bc79d;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.tf {
+  background: #9bc79d;
+  text-transform: uppercase;
+  text-align: right;
+  font-size: 1.2em;  
+}
+
+.tf p {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+.col {
+  padding: 1em;
+  width: 16%;
+}
+
+.col-pro {
+  width: 44%;
+}
+
+.col-pro > * {
+  vertical-align: middle;
+}
+
+.col-qty {
+  text-align: center;
+  width: 17%;
+}
+
+.col-numeric p {
+  font: bold 1.8em helvetica;
+}
+
+.col-total p {
+  color: #000e0c;
+}
+
+
+.row > div {
+  vertical-align: middle;
+}
+
+.row-bg2 {
+  background: #ece8e8;
+}
+
+.visibility-cart {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  top: 0.5em;
+  right: 0.5em;
+  font:  bold 2em arial;
+  border: 0.16em solid rgb(255, 255, 255);
+  border-radius: 2.5em;
+  padding: 0 0.22em 0 0.25em ;
+}
+
+.col-qty > * {
+  vertical-align: middle; 
+}
+
+.col-qty > input {
+  max-width: 2.6em;
+}
+
+
+a.qty {
+  width: 1em;
+  line-height: 1em;
+  border-radius: 2em;
+  font-size: 2.5em;
+  font-weight: bold;
+  text-align: center;
+  background: #43ace3;  
+  color: #fff;
+}
+
+
+
+.btn {
+  padding: 10px 30px;
+  border-radius: 0.3em;
+  font-size: 1.4em;
+  font-weight: bold;
+  background: #53addd;
+  color: #fff;
+
+}
+
+
+.btn-update {
+  float: right;
+  margin:1.5em ;
+}
+
+.transition {
+  transition: all 7.3s ease-in-out;
+}
+  
+  img {
+    max-width: 100%;
+    margin-bottom: 1em;
+  }
+
+
+      </style>
+<body>
+  <header>
+    <h1>
+      <a href="index.html"><font size="7" face="serif">服利社</a></font>
+    </h1>
+    <nav class="pc-nav">
+        <ul>
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="商品.html">商品</a></li>
+            <li><a href="Q&A.html">Q&A</a></li>
+            <li><a href="關於我們.html">關於我們</a></li>
+            <li><a href="注冊.html">加入會員</a></li>
+            <li><a href="登入.html">登入</a></li>
+            <li><a href="index.html">登出</a></li>
+        </ul>
+    </nav>
+</header>
+
+<p style="padding-top: 100px;"></p>
+<div class="container">
+  <div class="heading">
+   
+    <h1>購物車</h1>
+    
+    <a href="index.html" class="visibility-cart transition is-open">X</a>    
+  </div>
+  
+  <div class="cart transition is-open">
+    
+    <a href="購物車.html" class="btn btn-update">更新</a>
+    
+    
+    <div class="table">
+      
+      <div class="layout-inline row th"><br>
+        <div class="col col-pro">商品一覽</div>
+        <div class="col col-price align-center "> 
+         價錢
+        </div>
+        <div class="col col-qty align-center">數量</div>
+        
+        <div class="col">小計</div>
+      </div>
+      
+      <div class="layout-inline row">
+        
+        <div class="col col-pro layout-inline">
+          <img src="child.jpg" alt="child" />
+  
+        </div>
+        
+        <div class="col col-price col-numeric align-center ">
+          <p>NT$190</p>
+        </div>
+
+        <div class="col col-qty layout-inline">
+          <a href="" class="qty qty-minus">-</a>
+            <input type="numeric" value="3"/>
+          <a href="" class="qty qty-plus">+</a>
+        </div>
+      
+        <div class="col col-total col-numeric">         
+         <p>NT$570</p>
+        </div>
+      </div>
+      
+      <div class="layout-inline row row-bg2">
+
+        <div class="col col-pro layout-inline">
+          <img src="w.jpg" alt="w" />
+ 
+        </div>
+        
+        <div class="col col-price col-numeric align-center ">
+          <p>NT$240</p>
+        </div>
+
+        <div class="col col-qty  layout-inline">
+          <a href="" class="qty qty-minus ">-</a>
+            <input type="numeric" value="2" />
+          <a href="" class="qty qty-plus">+</a>
+        </div>
+        
+        
+        <div class="col col-total col-numeric">
+          <p>NT$480</p>
+        </div>      
+      
+      </div>
+      
+       <div class="layout-inline row">
+        
+        <div class="col col-pro layout-inline">
+          <img src="b.jpg" alt="w2" /><br>
+          
+        </div>
+        
+        <div class="col col-price col-numeric align-center ">
+          <p>NT$220</p>
+        </div>
+
+        <div class="col col-qty layout-inline">
+          <a href="" class="qty qty-minus">-</a>
+            <input type="numeric" value="1" />
+          <a href="" class="qty qty-plus">+</a>
+        </div>
+        
+      
+         <div class="col col-total col-numeric">  
+           <p>NT$220</p>
+         </div>         
+      </div>
+  
+       <div class="tf">
+         <div class="row layout-inline">
+           <div class="col"></div>
+         </div>
+         <div class="row layout-inline">
+          
+           <div class="col"></div>
+         </div>
+          <div class="row layout-inline">
+           <div class="col">
+             <p>總計</p>
+           </div>
+           <div class="col">
+           
+              <p>NT$1270</p>
+           </div>
+         </div>
+       </div>         
+  </div>
+    
+    <a href="" class="btn btn-update">結帳</a>
+  
+</div>
+</div>
+      <footer id="footer">
+        <font size="3">
+        <small >桃園市中壢區中北路200號<br>Tel：+886-3-265-9999<br>Fax：+886-3-265-8888</small>
+    </footer></font>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+
+<div id="page_top"><a href="購物車.html"></a></div>
+</body>
+</html>

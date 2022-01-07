@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>商品</title>
+    <style>
+    body{
+     
+        max-height: 500px;
+  
+    }
+    * {
+   box-sizing: border-box;
+}
+body {
+   margin: 0;
+   padding: 0;
+   background-color: #fff;
+}
+header {
+   padding: 30px 4% 10px;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   background-color: #fff;
+   display: flex;
+   align-items: center;
+   z-index: 1000;;
+}
+h1 {
+   margin: 0; padding: 0;
+   font-size: 30px;
+}
+a {	
+   text-decoration: none;
+   color: #615e5e;
+
+}
+ul {
+   list-style: none;
+   margin: 0;
+   display: flex;
+}
+li {
+   margin: 0 0 0 15px;
+   font-size: 14px;
+}
+small{
+  background:rgb(68, 67, 67);
+  color: rgb(248, 241, 241);;
+  display: block;
+  text-align: center;
+  padding:20px;
+}
+#page_top{/*top page*/
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  opacity: 0.6;
+}
+#page_top a{
+  width: 60px;
+  height: 60px;
+  text-decoration: none;
+}
+#page_top a::before{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f0aa';
+  font-size: 60px;
+  color: #afadad;
+}
+
+#form2{/*サーチ*/
+position:relative;
+max-width:300px;	
+margin-bottom:auto;
+margin-left: 10%;
+margin-top: 2%
+
+
+}
+#sbox2{
+height:30px;
+padding:0 10px; 
+position:absolute; 
+left:0;
+top:0; 
+border-radius:2px;
+outline:0;
+background:#eee;	
+}
+#sbtn2{
+height:35px;
+position:absolute; 
+left:190px;/*アイコン左右の位置調整*/
+top:0;
+background:none;
+color:rgb(131, 127, 127);
+border:none;
+font-size:20px;/*アイコンサイズ*/
+}
+
+
+  
+  .c img{
+    width:50%;
+    height:60%;
+    margin-top: 10%;
+  }
+  .z img{
+    width:50%;
+    height:60%;
+    margin-top: 10%;
+  
+  } .x img{
+    width:50%;
+    height:60%;
+    margin-top: 10%;
+  } .v img{
+    width:50%;
+    height:60%;
+    margin-top: 10%;
+  } 
+  
+#page_top{/*top page*/
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  opacity: 0.6;
+}
+#page_top a{
+  width: 60px;
+  height: 60px;
+  text-decoration: none;
+}
+#page_top a::before{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f0aa';
+  font-size: 60px;
+  color: #afadad;
+}
+
+.kakomiao {
+ position: relative;
+ margin: 2em auto;
+ padding: 1.2em;
+ width: 60%;
+ color: #555555; /* 文字色 */
+ background-color: #fff;
+ border: 2px solid #0a71ad; /* 枠線の太さ・色 */
+ box-shadow: 2px 2px 1px #ccc;/* 影の色 */
+ text-align: center;
+ display: flex;
+}
+.titleao {
+ position: absolute;
+ padding: 0 .5em;
+ left: 20px;
+ top: -15px;
+ font-weight: bold;
+ background-color: #fff; /* タイトル背景色 */
+ color: #0a71ad; /* タイトル文字色 */
+
+}
+.kakomimomo {
+ position: relative;
+ margin: 2em auto;
+ padding: 1.2em;
+ width: 60%;
+ color: #555555; /* 文字色 */
+ background-color: #fff;
+ border: 2px solid #c74aa8; /* 枠線の太さ・色 */
+ box-shadow: 2px 2px 1px #ccc;/* 影の色 */
+  text-align: center;
+  display: flex;
+}
+.titlemomo {
+ position: absolute;
+ padding: 0 .5em;
+ left: 20px;
+ top: -15px;
+ font-weight: bold;
+ background-color: #fff; /* タイトル背景色 */
+ color: #c74aa8; /* タイトル文字色 */
+
+}
+.kakomiki {
+ position: relative;
+ margin: 2em auto;
+ padding: 1.2em;
+ width: 60%;
+ color: #555555; /* 文字色 */
+ background-color: #fff;
+text-align: center;
+ border: 2px solid #ecff44; /* 枠線の太さ・色 */
+ box-shadow: 2px 2px 1px #ccc;/* 影の色 */
+
+ display: flex;
+}
+.titleki {
+ position: absolute;
+ padding: 0 .5em;
+ left: 20px;
+ top: -15px;
+ font-weight: bold;
+ background-color: #fff; /* タイトル背景色 */
+ color: #ecff44; /* タイトル文字色 */
+
+
+}
+
+      </style>
+
+          <body>
+            <header id="header">
+              <h1>
+                <a href="index.html"><font size="7" face="serif">服利社</a></font>
+            </h1>
+            <nav class="pc-nav">
+                <ul>
+                    <li><a href="index.html">首頁</a></li>
+                    <li><a href="商品.html">商品</a></li>
+                    <li><a href="Q&A.html">Q&A</a></li>
+                    <li><a href="關於我們.html">關於我們</a></li>
+                    <li><a href="注冊.html">加入會員</a></li>
+                    <li><a href="登入.html">登入</a></li>
+                    <li><a href="index.html">登出</a></li>
+                </ul>
+            </nav>
+            <form id="form2">
+              <input id="sbox2"  id="s" name="s" type="text" placeholder="Search"/>
+              <button type="submit" id="sbtn2"><i class="fas fa-search"></i></button>
+              </form>
+                </header>  
+                <p style="padding-top: 190px;"></p>
+                <div class="kakomiao">
+                  <font size="5"><span class="titleao">Men's</span>
+                </font>
+       <a href="商品1.html"class="c">
+          <img src="b.jpg">  <p>NT$220</p>
+        </a>
+        <a href="商品1.html" class="z">
+          <img src="b.jpg"> <p>NT$220</p>
+        </a>
+        <a href="商品1.html" class="x">
+          <img src="b.jpg">  <p>NT$220</p>
+        </a>
+        <a href="商品1.html" class="v">
+          <img src="b.jpg"  > <p>NT$220</p>
+        </a>
+
+     </div>
+       <p style="padding-top: 53px;"></p>
+       <div class="kakomimomo"><font size="5"><span class="titlemomo">Women's</span>
+       </font>
+       <a href="商品2.html"class="c" >
+        <img src="w.jpg"> <p>NT$240</p>
+        </a>
+      <a href="商品2.html" class="z" >
+        <img src="w.jpg">   <p>NT$240</p>
+      </a>
+      <a href="商品2.html" class="x" >
+        <img src="w.jpg">   <p>NT$240</p>
+      </a>
+      <a href="商品2.html" class="v">
+        <img src="w.jpg"  >  <p>NT$240</p>
+      </a>
+      </div>
+
+        <p style="padding-top: 53px;"></p>
+        <div class="kakomiki"><font size="5"><span class="titleki">Kids</span>
+        </font>
+        
+        <a href="商品3.html"class="c" >
+            <img src="child.jpg"> <p>NT$190</p>
+          <a href="商品3.html" class="z" >
+            <img src="child.jpg"> <p>NT$190</p>
+          </a>
+          <a href="商品3.html" class="x" >
+            <img src="child.jpg"> <p>NT$190</p>
+          </a>
+          <a href="商品3.html" class="v">
+            <img src="child.jpg"  > <p>NT$190</p>
+         
+            </a>
+          </div>
+     
+            <footer id="footer">
+              <small>桃園市中壢區中北路200號<br>Tel：+886-3-265-9999<br>Fax：+886-3-265-8888</small>
+          </footer>
+          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+      
+      <div id="page_top"><a href="商品.html"></a></div>
+  </body>
+</html>

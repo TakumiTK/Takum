@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>加入會員</title>
+    <style>
+  * {
+   box-sizing: border-box;
+}
+body {
+   margin: 0;
+   padding: 0;
+   background-color: #fff;
+}
+header {
+   padding: 30px 4% 10px;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   background-color: #fff;
+   display: flex;
+   align-items: center;
+}
+h1 {
+   margin: 0; padding: 0;
+   font-size: 30px;
+}
+a {	
+   text-decoration: none;
+   color: #615e5e;
+
+}
+ul {
+   list-style: none;
+   margin: 0;
+   display: flex;
+}
+li {
+   margin: 0 0 0 15px;
+   font-size: 14px;
+}
+
+#page_top{/*top page*/
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  opacity: 0.6;
+}
+#page_top a{
+  width: 60px;
+  height: 60px;
+  text-decoration: none;
+}
+#page_top a::before{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f0aa';
+  font-size: 60px;
+  color: #afadad;
+}
+
+
+ 
+input{/*huiyuan*/
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    color: #495057;
+    background-color: #ffffff;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+  }
+ 
+  input[type="submit"]{
+    display: block;
+    width: 150px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #a2aebb;
+    border-bottom: solid 5px #a2aebb;
+  }
+ 
+  .f{
+    width: 500px;
+    margin: 25px 50px;
+    margin-top: 6%;
+    background-color: white;
+    border: 1px solid #dddddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+ 
+  .f_title{
+    color: white;
+    background-color: #a2aebb;
+    padding: 10px 30px;
+  }
+ 
+  .f_content{
+    margin: 25px 50px;
+  }
+ 
+  .f_list{
+    margin-bottom: 2em;
+  }
+  .btn-square-shadow {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background:#a2aebb;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #97a0a8;
+  border-radius: 3px;
+}
+.btn-square-shadow:active {
+  /*ボタンを押したとき*/
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+  border-bottom: none;
+}
+      </style>
+<body>
+  <header>
+    <h1>
+      <a href="index.html"><font size="7" face="serif">服利社</a></font>
+    </h1>
+    <nav class="pc-nav">
+        <ul>
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="商品.html">商品</a></li>
+            <li><a href="Q&A.html">Q&A</a></li>
+            <li><a href="關於我們.html">關於我們</a></li>
+            <li><a href="注冊.html">加入會員</a></li>
+            <li><a href="登入.html">登入</a></li>
+            <li><a href="index.html">登出</a></li>
+        </ul>
+    </nav>
+  
+</header>
+<main>
+  <p style="margin-top: 10%;"></p>
+    <div class="f">
+        <div class="f_title">加入會員</div>
+        <div class="f_content">
+          <form>
+            <div class="f_list">
+              <label style="margin-left: 10%;">名字</label>
+              <input name="ID" type="text" class=""placeholder="">
+ 
+              <label style="margin-left: 10%;">信箱</label>
+              <input name="mail" type="email" class="">
+ 
+              <label style="margin-left: 10%;">密碼</label>
+              <input name="password" type="password" class="">
+ 
+              <label style="margin-left: 10%;">手機</label>
+              <input name="phone" type="phonenumber" class="">
+              <p style="padding-right: 60%;">
+            <input type="reset" class="btn-square-shadow"value="註冊"></p>
+            </div>
+          </form>
+        </div>
+      </div>
+   
+</main>
+
+    
+  
+</body>
+</html>
